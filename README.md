@@ -7,7 +7,10 @@
 ...... y mucho mas!
 
 Estos proyectos estan hechos en html y css **(1).
-Para poder ver cada uno de los mini-proyectos se recomienda **(2):
+
+Demo: https://franncoherrera.github.io/css-funny/
+
+Para poder ver cada uno de los mini-proyectos se recomienda:
 
 1. Tener instalado VSCode.
 2. Instalar el pluging:
@@ -24,4 +27,3 @@ Para poder ver cada uno de los mini-proyectos se recomienda **(2):
 **(1) Estos proyectos han sido recolectados de diferentes desarolladores y han sido estudiados y modificados por mi.
       El fin de estos proyectos es el de ser compartido, por eso que he agrupado todos los que mas me gustaron.
 
-**(2) Se coloca un gift dentro de cada mini-proyecto para ver sin necesidad de descargarlo y ejectuarlo.
