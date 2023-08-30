@@ -29,8 +29,10 @@ body h2 {
 }
 
 .caja {
-  border: 1px solid black;
+  border: 1px solid #5b5151;
   color: black;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   font-weight: bold;
   width: 400px;
   height: 200px;
@@ -43,7 +45,7 @@ body h2 {
 }
 
 .caja:hover {
-  background-color: gray;
+  background-color: #f2b6e0;
 }
 
 .c1 {
