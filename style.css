@@ -128,6 +128,92 @@ button:hover .right {
 }
 
 
+body footer {
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 0;
+  background: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body footer h1 {
+  color: white;
+  display: flex;
+  margin-left: 15px;
+  font-size: 25px;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+footer ul li a {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+footer ul li a svg {
+  position: relative;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+footer ul li a:hover svg {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+footer ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+footer ul li a:hover:before {
+  top: 0;
+}
+
+footer ul li:nth-child(1) a:before {
+  background: #f00;
+}
+
+/* @media only screen and (max-width: 1614px) {
+  body footer{
+    bottom: -100px;
+  }
+} */
+@media only screen and (max-width: 650px) {
+  body {
+    position: relative;
+    margin: 0;
+  }
+  body footer{
+    bottom: -150px;
+  }
+}
 
 @media only screen and (max-width: 700px) {
   button{
