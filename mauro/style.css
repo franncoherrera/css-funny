@@ -34,6 +34,15 @@ a div{
 	border-radius: inherit;
 
 }
+
+/*NO utilizar solo por la imagen*/
+.margin{
+	margin-left: -125px;
+}
+.margin-logo{
+	margin-left: -65px;
+}
+
 a:nth-child(1)
 {
 	border-radius: 40vmin 0 0 0;
