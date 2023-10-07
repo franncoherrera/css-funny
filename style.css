@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0;
 }
+
+html{
+  scroll-behavior: smooth;
+  height: auto;
+}
+
+
 body {
   font-family: "Raleway", sans-serif;
   background: #f2b6e0;
@@ -12,6 +19,7 @@ body .container-titulo {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   padding: 20px;
 }
 /**Contenedor general**/
@@ -208,6 +216,9 @@ footer ul li:nth-child(1) a:before {
 }
 
 @media only screen and (max-width: 650px) {
+  body{
+    position: relative;
+  }
   body footer {
     bottom: -150px;
   }
