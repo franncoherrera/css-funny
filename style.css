@@ -5,14 +5,14 @@
 
 html{
   scroll-behavior: smooth;
-  height: auto;
+  height: 100%;
 }
 
 
 body {
   font-family: "Raleway", sans-serif;
   background: #f2b6e0;
-  height: 100%;
+  height: auto;
 }
 
 body .container-titulo {
@@ -220,7 +220,7 @@ footer ul li:nth-child(1) a:before {
     position: relative;
   }
   body footer {
-    bottom: -150px;
+    bottom: -75px;
   }
 }
 
