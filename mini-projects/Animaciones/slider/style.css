@@ -1,0 +1,212 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background-color: #192233;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 0px 0px;
+  grid-template-areas: "main main main main main main main" ". i1 i2 i3 i4 i5 .";
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 80vmin;
+  border: 2px solid #171818;
+  background-color: #171818;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.gallery {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 80vmin;
+  height: 80vmin;
+  --pos: 0;
+}
+
+.gallery > div {
+  overflow: hidden;
+  background-color: white;
+  width: 20vmin;
+  height: 20vmin;
+  display: flex;
+}
+
+.gallery > div > div {
+  flex: 1 0 auto;
+  width: 100%;
+  height: 100%;
+  background-size: 80vmin auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery > div:nth-of-type(4n + 1) > div {
+  --xpos: 0;
+}
+
+.gallery > div:nth-of-type(1) > div {
+  --ypos: 0;
+}
+
+.gallery > div:nth-of-type(5) > div {
+  --ypos: 20;
+}
+
+.gallery > div:nth-of-type(9) > div {
+  --ypos: 40;
+}
+
+.gallery > div:nth-of-type(13) > div {
+  --ypos: 60;
+}
+
+.gallery > div:nth-of-type(4n + 2) > div {
+  --xpos: 20;
+}
+
+.gallery > div:nth-of-type(2) > div {
+  --ypos: 0;
+}
+
+.gallery > div:nth-of-type(6) > div {
+  --ypos: 20;
+}
+
+.gallery > div:nth-of-type(10) > div {
+  --ypos: 40;
+}
+
+.gallery > div:nth-of-type(14) > div {
+  --ypos: 60;
+}
+
+.gallery > div:nth-of-type(4n + 3) > div {
+  --xpos: 40;
+}
+
+.gallery > div:nth-of-type(3) > div {
+  --ypos: 0;
+}
+
+.gallery > div:nth-of-type(7) > div {
+  --ypos: 20;
+}
+
+.gallery > div:nth-of-type(11) > div {
+  --ypos: 40;
+}
+
+.gallery > div:nth-of-type(15) > div {
+  --ypos: 60;
+}
+
+.gallery > div:nth-of-type(4n + 4) > div {
+  --xpos: 60;
+}
+
+.gallery > div:nth-of-type(4) > div {
+  --ypos: 0;
+}
+
+.gallery > div:nth-of-type(8) > div {
+  --ypos: 20;
+}
+
+.gallery > div:nth-of-type(12) > div {
+  --ypos: 40;
+}
+
+.gallery > div:nth-of-type(16) > div {
+  --ypos: 60;
+}
+
+.gallery > div > div {
+  background-position: calc(var(--xpos) * -1vmin) calc(var(--ypos) * -1vmin);
+}
+
+input {
+  margin: 20px;
+}
+
+input:nth-of-type(1) {
+  grid-area: i1;
+}
+
+input:nth-of-type(2) {
+  grid-area: i2;
+}
+
+input:nth-of-type(3) {
+  grid-area: i3;
+}
+
+input:nth-of-type(4) {
+  grid-area: i4;
+}
+
+input:nth-of-type(5) {
+  grid-area: i5;
+}
+
+input:nth-of-type(1):checked ~ .gallery {
+  --pos: 0;
+}
+
+input:nth-of-type(2):checked ~ .gallery {
+  --pos: 20;
+}
+
+input:nth-of-type(3):checked ~ .gallery {
+  --pos: 40;
+}
+
+input:nth-of-type(4):checked ~ .gallery {
+  --pos: 60;
+}
+
+input:nth-of-type(5):checked ~ .gallery {
+  --pos: 80;
+}
+
+.north {
+  flex-direction: column;
+}
+
+.east {
+  flex-direction: row;
+}
+
+.south {
+  flex-direction: column-reverse;
+}
+
+.west {
+  flex-direction: row-reverse;
+}
+
+.north > div {
+  transform: translateY(calc(var(--pos) * -1vmin));
+}
+
+.east > div {
+  transform: translateX(calc(var(--pos) * -1vmin));
+}
+
+.south > div {
+  transform: translateY(calc(var(--pos) * 1vmin));
+}
+
+.west > div {
+  transform: translateX(calc(var(--pos) * 1vmin));
+}
