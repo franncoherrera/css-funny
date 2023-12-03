@@ -1,0 +1,1668 @@
+/* Programador Designer Pro */
+/* Siga-nos, Curti, Compartilha */
+
+:root {
+  --bg: url(https://source.unsplash.com/random/800x600/?mountain);
+  --tra: all 0.5s ease 0s;
+}
+
+* {
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 50%, #192233 20%, #000);
+
+  perspective: 250vmin;
+}
+
+body:hover .content, body:hover .content .art {
+  animation-duration: 0s;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.75s ease 0s;
+  animation: start-v 4s ease 0s 1;
+}
+
+.art {
+  --width: 90;
+  --height: 60;
+  --depth: 5;
+  --sat: 10%;
+  --hue: 10;
+  height: calc(var(--height) * 1vmin);
+  width: calc(var(--width) * 1vmin);
+  border-radius: 1px;
+  /*transform: rotateX(-11deg) rotateY(-19deg);*/
+  transition: all 0.75s ease 0s;
+  animation: start-h 4s ease 0s 1;
+}
+
+.side {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 1px;
+  background: var(--bg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100vmin 70vmin;
+  border: 1px solid #0004;
+}
+.side:nth-of-type(1) {
+  transform: translate3d(-50%, -50%, calc(var(--depth) * 0.5vmin));
+}
+.side:nth-of-type(2) {
+  transform: translate3d(-50%, -50%, calc(var(--depth) * -0.5vmin)) rotateY(180deg);
+}
+.side:nth-of-type(3) {
+  width: calc(var(--depth) * 1vmin);
+  transform: translate(-50%, -50%) rotateY(90deg) translate3d(0, 0, calc(var(--width) * 0.5vmin));
+  background-position: -95vmin -5vmin;
+  filter: brightness(0.65);
+}
+.side:nth-of-type(4) {
+  width: calc(var(--depth) * 1vmin);
+  transform: translate(-50%, -50%) rotateY(-90deg) translate3d(0, 0, calc(var(--width) * 0.5vmin));
+  background-position: 0vmin -5vmin;
+  filter: brightness(1.25);
+}
+.side:nth-of-type(5) {
+  height: calc(var(--depth) * 1vmin);
+  transform: translate(-50%, -50%) rotateX(90deg) translate3d(0, 0, calc(var(--height) * 0.5vmin));
+  background-position: 50% 0vmin;
+  filter: brightness(1.15);
+}
+.side:nth-of-type(6) {
+  height: calc(var(--depth) * 1vmin);
+  transform: translate(-50%, -50%) rotateX(-90deg) translate3d(0, 0, calc(var(--height) * 0.5vmin));
+  background-position: 50% 100%;
+  filter: brightness(0.4);
+}
+
+.cam {
+  width: 5.263vw;
+  height: 5.263vh;
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  cursor: zoom-in;
+  transform: translateZ(0vmin);
+}
+.cam:nth-child(1):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(-89deg);
+}
+.cam:nth-child(2):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(-79deg);
+}
+.cam:nth-child(3):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(-69deg);
+}
+.cam:nth-child(4):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(-59deg);
+}
+.cam:nth-child(5):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(-49deg);
+}
+.cam:nth-child(6):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(-39deg);
+}
+.cam:nth-child(7):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(-29deg);
+}
+.cam:nth-child(8):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(-19deg);
+}
+.cam:nth-child(9):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(-9deg);
+}
+.cam:nth-child(10):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(1deg);
+}
+.cam:nth-child(11):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(11deg);
+}
+.cam:nth-child(12):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(21deg);
+}
+.cam:nth-child(13):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(31deg);
+}
+.cam:nth-child(14):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(41deg);
+}
+.cam:nth-child(15):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(51deg);
+}
+.cam:nth-child(16):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(61deg);
+}
+.cam:nth-child(17):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(71deg);
+}
+.cam:nth-child(18):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(81deg);
+}
+.cam:nth-child(19):hover ~ .content .art {
+  transform: rotateX(89deg) rotateY(91deg);
+}
+.cam:nth-child(20):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(-89deg);
+}
+.cam:nth-child(21):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(-79deg);
+}
+.cam:nth-child(22):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(-69deg);
+}
+.cam:nth-child(23):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(-59deg);
+}
+.cam:nth-child(24):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(-49deg);
+}
+.cam:nth-child(25):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(-39deg);
+}
+.cam:nth-child(26):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(-29deg);
+}
+.cam:nth-child(27):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(-19deg);
+}
+.cam:nth-child(28):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(-9deg);
+}
+.cam:nth-child(29):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(1deg);
+}
+.cam:nth-child(30):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(11deg);
+}
+.cam:nth-child(31):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(21deg);
+}
+.cam:nth-child(32):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(31deg);
+}
+.cam:nth-child(33):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(41deg);
+}
+.cam:nth-child(34):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(51deg);
+}
+.cam:nth-child(35):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(61deg);
+}
+.cam:nth-child(36):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(71deg);
+}
+.cam:nth-child(37):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(81deg);
+}
+.cam:nth-child(38):hover ~ .content .art {
+  transform: rotateX(79deg) rotateY(91deg);
+}
+.cam:nth-child(39):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(-89deg);
+}
+.cam:nth-child(40):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(-79deg);
+}
+.cam:nth-child(41):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(-69deg);
+}
+.cam:nth-child(42):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(-59deg);
+}
+.cam:nth-child(43):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(-49deg);
+}
+.cam:nth-child(44):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(-39deg);
+}
+.cam:nth-child(45):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(-29deg);
+}
+.cam:nth-child(46):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(-19deg);
+}
+.cam:nth-child(47):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(-9deg);
+}
+.cam:nth-child(48):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(1deg);
+}
+.cam:nth-child(49):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(11deg);
+}
+.cam:nth-child(50):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(21deg);
+}
+.cam:nth-child(51):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(31deg);
+}
+.cam:nth-child(52):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(41deg);
+}
+.cam:nth-child(53):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(51deg);
+}
+.cam:nth-child(54):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(61deg);
+}
+.cam:nth-child(55):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(71deg);
+}
+.cam:nth-child(56):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(81deg);
+}
+.cam:nth-child(57):hover ~ .content .art {
+  transform: rotateX(69deg) rotateY(91deg);
+}
+.cam:nth-child(58):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(-89deg);
+}
+.cam:nth-child(59):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(-79deg);
+}
+.cam:nth-child(60):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(-69deg);
+}
+.cam:nth-child(61):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(-59deg);
+}
+.cam:nth-child(62):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(-49deg);
+}
+.cam:nth-child(63):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(-39deg);
+}
+.cam:nth-child(64):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(-29deg);
+}
+.cam:nth-child(65):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(-19deg);
+}
+.cam:nth-child(66):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(-9deg);
+}
+.cam:nth-child(67):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(1deg);
+}
+.cam:nth-child(68):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(11deg);
+}
+.cam:nth-child(69):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(21deg);
+}
+.cam:nth-child(70):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(31deg);
+}
+.cam:nth-child(71):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(41deg);
+}
+.cam:nth-child(72):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(51deg);
+}
+.cam:nth-child(73):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(61deg);
+}
+.cam:nth-child(74):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(71deg);
+}
+.cam:nth-child(75):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(81deg);
+}
+.cam:nth-child(76):hover ~ .content .art {
+  transform: rotateX(59deg) rotateY(91deg);
+}
+.cam:nth-child(77):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(-89deg);
+}
+.cam:nth-child(78):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(-79deg);
+}
+.cam:nth-child(79):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(-69deg);
+}
+.cam:nth-child(80):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(-59deg);
+}
+.cam:nth-child(81):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(-49deg);
+}
+.cam:nth-child(82):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(-39deg);
+}
+.cam:nth-child(83):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(-29deg);
+}
+.cam:nth-child(84):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(-19deg);
+}
+.cam:nth-child(85):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(-9deg);
+}
+.cam:nth-child(86):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(1deg);
+}
+.cam:nth-child(87):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(11deg);
+}
+.cam:nth-child(88):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(21deg);
+}
+.cam:nth-child(89):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(31deg);
+}
+.cam:nth-child(90):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(41deg);
+}
+.cam:nth-child(91):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(51deg);
+}
+.cam:nth-child(92):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(61deg);
+}
+.cam:nth-child(93):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(71deg);
+}
+.cam:nth-child(94):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(81deg);
+}
+.cam:nth-child(95):hover ~ .content .art {
+  transform: rotateX(49deg) rotateY(91deg);
+}
+.cam:nth-child(96):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(-89deg);
+}
+.cam:nth-child(97):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(-79deg);
+}
+.cam:nth-child(98):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(-69deg);
+}
+.cam:nth-child(99):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(-59deg);
+}
+.cam:nth-child(100):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(-49deg);
+}
+.cam:nth-child(101):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(-39deg);
+}
+.cam:nth-child(102):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(-29deg);
+}
+.cam:nth-child(103):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(-19deg);
+}
+.cam:nth-child(104):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(-9deg);
+}
+.cam:nth-child(105):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(1deg);
+}
+.cam:nth-child(106):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(11deg);
+}
+.cam:nth-child(107):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(21deg);
+}
+.cam:nth-child(108):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(31deg);
+}
+.cam:nth-child(109):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(41deg);
+}
+.cam:nth-child(110):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(51deg);
+}
+.cam:nth-child(111):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(61deg);
+}
+.cam:nth-child(112):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(71deg);
+}
+.cam:nth-child(113):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(81deg);
+}
+.cam:nth-child(114):hover ~ .content .art {
+  transform: rotateX(39deg) rotateY(91deg);
+}
+.cam:nth-child(115):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(-89deg);
+}
+.cam:nth-child(116):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(-79deg);
+}
+.cam:nth-child(117):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(-69deg);
+}
+.cam:nth-child(118):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(-59deg);
+}
+.cam:nth-child(119):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(-49deg);
+}
+.cam:nth-child(120):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(-39deg);
+}
+.cam:nth-child(121):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(-29deg);
+}
+.cam:nth-child(122):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(-19deg);
+}
+.cam:nth-child(123):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(-9deg);
+}
+.cam:nth-child(124):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(1deg);
+}
+.cam:nth-child(125):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(11deg);
+}
+.cam:nth-child(126):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(21deg);
+}
+.cam:nth-child(127):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(31deg);
+}
+.cam:nth-child(128):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(41deg);
+}
+.cam:nth-child(129):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(51deg);
+}
+.cam:nth-child(130):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(61deg);
+}
+.cam:nth-child(131):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(71deg);
+}
+.cam:nth-child(132):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(81deg);
+}
+.cam:nth-child(133):hover ~ .content .art {
+  transform: rotateX(29deg) rotateY(91deg);
+}
+.cam:nth-child(134):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(-89deg);
+}
+.cam:nth-child(135):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(-79deg);
+}
+.cam:nth-child(136):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(-69deg);
+}
+.cam:nth-child(137):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(-59deg);
+}
+.cam:nth-child(138):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(-49deg);
+}
+.cam:nth-child(139):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(-39deg);
+}
+.cam:nth-child(140):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(-29deg);
+}
+.cam:nth-child(141):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(-19deg);
+}
+.cam:nth-child(142):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(-9deg);
+}
+.cam:nth-child(143):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(1deg);
+}
+.cam:nth-child(144):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(11deg);
+}
+.cam:nth-child(145):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(21deg);
+}
+.cam:nth-child(146):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(31deg);
+}
+.cam:nth-child(147):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(41deg);
+}
+.cam:nth-child(148):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(51deg);
+}
+.cam:nth-child(149):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(61deg);
+}
+.cam:nth-child(150):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(71deg);
+}
+.cam:nth-child(151):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(81deg);
+}
+.cam:nth-child(152):hover ~ .content .art {
+  transform: rotateX(19deg) rotateY(91deg);
+}
+.cam:nth-child(153):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(-89deg);
+}
+.cam:nth-child(154):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(-79deg);
+}
+.cam:nth-child(155):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(-69deg);
+}
+.cam:nth-child(156):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(-59deg);
+}
+.cam:nth-child(157):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(-49deg);
+}
+.cam:nth-child(158):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(-39deg);
+}
+.cam:nth-child(159):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(-29deg);
+}
+.cam:nth-child(160):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(-19deg);
+}
+.cam:nth-child(161):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(-9deg);
+}
+.cam:nth-child(162):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(1deg);
+}
+.cam:nth-child(163):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(11deg);
+}
+.cam:nth-child(164):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(21deg);
+}
+.cam:nth-child(165):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(31deg);
+}
+.cam:nth-child(166):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(41deg);
+}
+.cam:nth-child(167):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(51deg);
+}
+.cam:nth-child(168):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(61deg);
+}
+.cam:nth-child(169):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(71deg);
+}
+.cam:nth-child(170):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(81deg);
+}
+.cam:nth-child(171):hover ~ .content .art {
+  transform: rotateX(9deg) rotateY(91deg);
+}
+.cam:nth-child(172):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(-89deg);
+}
+.cam:nth-child(173):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(-79deg);
+}
+.cam:nth-child(174):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(-69deg);
+}
+.cam:nth-child(175):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(-59deg);
+}
+.cam:nth-child(176):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(-49deg);
+}
+.cam:nth-child(177):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(-39deg);
+}
+.cam:nth-child(178):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(-29deg);
+}
+.cam:nth-child(179):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(-19deg);
+}
+.cam:nth-child(180):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(-9deg);
+}
+.cam:nth-child(181):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(1deg);
+}
+.cam:nth-child(182):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(11deg);
+}
+.cam:nth-child(183):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(21deg);
+}
+.cam:nth-child(184):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(31deg);
+}
+.cam:nth-child(185):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(41deg);
+}
+.cam:nth-child(186):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(51deg);
+}
+.cam:nth-child(187):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(61deg);
+}
+.cam:nth-child(188):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(71deg);
+}
+.cam:nth-child(189):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(81deg);
+}
+.cam:nth-child(190):hover ~ .content .art {
+  transform: rotateX(-1deg) rotateY(91deg);
+}
+.cam:nth-child(191):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(-89deg);
+}
+.cam:nth-child(192):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(-79deg);
+}
+.cam:nth-child(193):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(-69deg);
+}
+.cam:nth-child(194):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(-59deg);
+}
+.cam:nth-child(195):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(-49deg);
+}
+.cam:nth-child(196):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(-39deg);
+}
+.cam:nth-child(197):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(-29deg);
+}
+.cam:nth-child(198):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(-19deg);
+}
+.cam:nth-child(199):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(-9deg);
+}
+.cam:nth-child(200):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(1deg);
+}
+.cam:nth-child(201):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(11deg);
+}
+.cam:nth-child(202):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(21deg);
+}
+.cam:nth-child(203):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(31deg);
+}
+.cam:nth-child(204):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(41deg);
+}
+.cam:nth-child(205):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(51deg);
+}
+.cam:nth-child(206):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(61deg);
+}
+.cam:nth-child(207):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(71deg);
+}
+.cam:nth-child(208):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(81deg);
+}
+.cam:nth-child(209):hover ~ .content .art {
+  transform: rotateX(-11deg) rotateY(91deg);
+}
+.cam:nth-child(210):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(-89deg);
+}
+.cam:nth-child(211):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(-79deg);
+}
+.cam:nth-child(212):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(-69deg);
+}
+.cam:nth-child(213):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(-59deg);
+}
+.cam:nth-child(214):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(-49deg);
+}
+.cam:nth-child(215):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(-39deg);
+}
+.cam:nth-child(216):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(-29deg);
+}
+.cam:nth-child(217):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(-19deg);
+}
+.cam:nth-child(218):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(-9deg);
+}
+.cam:nth-child(219):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(1deg);
+}
+.cam:nth-child(220):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(11deg);
+}
+.cam:nth-child(221):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(21deg);
+}
+.cam:nth-child(222):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(31deg);
+}
+.cam:nth-child(223):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(41deg);
+}
+.cam:nth-child(224):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(51deg);
+}
+.cam:nth-child(225):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(61deg);
+}
+.cam:nth-child(226):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(71deg);
+}
+.cam:nth-child(227):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(81deg);
+}
+.cam:nth-child(228):hover ~ .content .art {
+  transform: rotateX(-21deg) rotateY(91deg);
+}
+.cam:nth-child(229):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(-89deg);
+}
+.cam:nth-child(230):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(-79deg);
+}
+.cam:nth-child(231):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(-69deg);
+}
+.cam:nth-child(232):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(-59deg);
+}
+.cam:nth-child(233):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(-49deg);
+}
+.cam:nth-child(234):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(-39deg);
+}
+.cam:nth-child(235):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(-29deg);
+}
+.cam:nth-child(236):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(-19deg);
+}
+.cam:nth-child(237):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(-9deg);
+}
+.cam:nth-child(238):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(1deg);
+}
+.cam:nth-child(239):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(11deg);
+}
+.cam:nth-child(240):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(21deg);
+}
+.cam:nth-child(241):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(31deg);
+}
+.cam:nth-child(242):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(41deg);
+}
+.cam:nth-child(243):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(51deg);
+}
+.cam:nth-child(244):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(61deg);
+}
+.cam:nth-child(245):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(71deg);
+}
+.cam:nth-child(246):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(81deg);
+}
+.cam:nth-child(247):hover ~ .content .art {
+  transform: rotateX(-31deg) rotateY(91deg);
+}
+.cam:nth-child(248):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(-89deg);
+}
+.cam:nth-child(249):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(-79deg);
+}
+.cam:nth-child(250):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(-69deg);
+}
+.cam:nth-child(251):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(-59deg);
+}
+.cam:nth-child(252):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(-49deg);
+}
+.cam:nth-child(253):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(-39deg);
+}
+.cam:nth-child(254):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(-29deg);
+}
+.cam:nth-child(255):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(-19deg);
+}
+.cam:nth-child(256):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(-9deg);
+}
+.cam:nth-child(257):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(1deg);
+}
+.cam:nth-child(258):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(11deg);
+}
+.cam:nth-child(259):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(21deg);
+}
+.cam:nth-child(260):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(31deg);
+}
+.cam:nth-child(261):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(41deg);
+}
+.cam:nth-child(262):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(51deg);
+}
+.cam:nth-child(263):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(61deg);
+}
+.cam:nth-child(264):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(71deg);
+}
+.cam:nth-child(265):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(81deg);
+}
+.cam:nth-child(266):hover ~ .content .art {
+  transform: rotateX(-41deg) rotateY(91deg);
+}
+.cam:nth-child(267):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(-89deg);
+}
+.cam:nth-child(268):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(-79deg);
+}
+.cam:nth-child(269):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(-69deg);
+}
+.cam:nth-child(270):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(-59deg);
+}
+.cam:nth-child(271):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(-49deg);
+}
+.cam:nth-child(272):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(-39deg);
+}
+.cam:nth-child(273):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(-29deg);
+}
+.cam:nth-child(274):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(-19deg);
+}
+.cam:nth-child(275):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(-9deg);
+}
+.cam:nth-child(276):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(1deg);
+}
+.cam:nth-child(277):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(11deg);
+}
+.cam:nth-child(278):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(21deg);
+}
+.cam:nth-child(279):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(31deg);
+}
+.cam:nth-child(280):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(41deg);
+}
+.cam:nth-child(281):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(51deg);
+}
+.cam:nth-child(282):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(61deg);
+}
+.cam:nth-child(283):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(71deg);
+}
+.cam:nth-child(284):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(81deg);
+}
+.cam:nth-child(285):hover ~ .content .art {
+  transform: rotateX(-51deg) rotateY(91deg);
+}
+.cam:nth-child(286):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(-89deg);
+}
+.cam:nth-child(287):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(-79deg);
+}
+.cam:nth-child(288):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(-69deg);
+}
+.cam:nth-child(289):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(-59deg);
+}
+.cam:nth-child(290):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(-49deg);
+}
+.cam:nth-child(291):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(-39deg);
+}
+.cam:nth-child(292):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(-29deg);
+}
+.cam:nth-child(293):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(-19deg);
+}
+.cam:nth-child(294):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(-9deg);
+}
+.cam:nth-child(295):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(1deg);
+}
+.cam:nth-child(296):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(11deg);
+}
+.cam:nth-child(297):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(21deg);
+}
+.cam:nth-child(298):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(31deg);
+}
+.cam:nth-child(299):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(41deg);
+}
+.cam:nth-child(300):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(51deg);
+}
+.cam:nth-child(301):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(61deg);
+}
+.cam:nth-child(302):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(71deg);
+}
+.cam:nth-child(303):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(81deg);
+}
+.cam:nth-child(304):hover ~ .content .art {
+  transform: rotateX(-61deg) rotateY(91deg);
+}
+.cam:nth-child(305):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(-89deg);
+}
+.cam:nth-child(306):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(-79deg);
+}
+.cam:nth-child(307):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(-69deg);
+}
+.cam:nth-child(308):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(-59deg);
+}
+.cam:nth-child(309):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(-49deg);
+}
+.cam:nth-child(310):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(-39deg);
+}
+.cam:nth-child(311):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(-29deg);
+}
+.cam:nth-child(312):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(-19deg);
+}
+.cam:nth-child(313):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(-9deg);
+}
+.cam:nth-child(314):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(1deg);
+}
+.cam:nth-child(315):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(11deg);
+}
+.cam:nth-child(316):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(21deg);
+}
+.cam:nth-child(317):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(31deg);
+}
+.cam:nth-child(318):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(41deg);
+}
+.cam:nth-child(319):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(51deg);
+}
+.cam:nth-child(320):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(61deg);
+}
+.cam:nth-child(321):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(71deg);
+}
+.cam:nth-child(322):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(81deg);
+}
+.cam:nth-child(323):hover ~ .content .art {
+  transform: rotateX(-71deg) rotateY(91deg);
+}
+.cam:nth-child(324):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(-89deg);
+}
+.cam:nth-child(325):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(-79deg);
+}
+.cam:nth-child(326):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(-69deg);
+}
+.cam:nth-child(327):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(-59deg);
+}
+.cam:nth-child(328):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(-49deg);
+}
+.cam:nth-child(329):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(-39deg);
+}
+.cam:nth-child(330):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(-29deg);
+}
+.cam:nth-child(331):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(-19deg);
+}
+.cam:nth-child(332):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(-9deg);
+}
+.cam:nth-child(333):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(1deg);
+}
+.cam:nth-child(334):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(11deg);
+}
+.cam:nth-child(335):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(21deg);
+}
+.cam:nth-child(336):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(31deg);
+}
+.cam:nth-child(337):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(41deg);
+}
+.cam:nth-child(338):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(51deg);
+}
+.cam:nth-child(339):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(61deg);
+}
+.cam:nth-child(340):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(71deg);
+}
+.cam:nth-child(341):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(81deg);
+}
+.cam:nth-child(342):hover ~ .content .art {
+  transform: rotateX(-81deg) rotateY(91deg);
+}
+.cam:nth-child(343):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(-89deg);
+}
+.cam:nth-child(344):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(-79deg);
+}
+.cam:nth-child(345):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(-69deg);
+}
+.cam:nth-child(346):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(-59deg);
+}
+.cam:nth-child(347):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(-49deg);
+}
+.cam:nth-child(348):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(-39deg);
+}
+.cam:nth-child(349):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(-29deg);
+}
+.cam:nth-child(350):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(-19deg);
+}
+.cam:nth-child(351):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(-9deg);
+}
+.cam:nth-child(352):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(1deg);
+}
+.cam:nth-child(353):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(11deg);
+}
+.cam:nth-child(354):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(21deg);
+}
+.cam:nth-child(355):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(31deg);
+}
+.cam:nth-child(356):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(41deg);
+}
+.cam:nth-child(357):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(51deg);
+}
+.cam:nth-child(358):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(61deg);
+}
+.cam:nth-child(359):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(71deg);
+}
+.cam:nth-child(360):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(81deg);
+}
+.cam:nth-child(361):hover ~ .content .art {
+  transform: rotateX(-91deg) rotateY(91deg);
+}
+.cam:active ~ .content {
+  transform: scale3d(1.8, 1.8, 1.8);
+  transition: all 0.75s ease 0s;
+}
+.cam:active ~ .photos, .cam:active ~ .options {
+  opacity: 0;
+  transition: var(--tra);
+}
+
+@keyframes start-h {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  25% {
+    transform: rotateY(30deg) rotateX(0deg);
+  }
+  75% {
+    transform: rotateY(-30deg) rotateX(0deg);
+  }
+  100% {
+    transform: rotateY(-1deg) rotateX(1deg);
+  }
+}
+@keyframes start-v {
+  0%, 66% {
+    transform: rotateY(0deg) rotateX(30deg);
+  }
+  33% {
+    transform: rotateY(0deg) rotateX(-30deg);
+  }
+  100% {
+    transform: rotateY(-1deg) rotateX(1deg);
+  }
+}
+.photos, .options {
+  background: #f0f0;
+  position: absolute;
+  width: 54vw;
+  height: 5.5vh;
+  bottom: 5.5vh;
+  left: calc(50% - 27vw);
+  z-index: 3;
+  transition: var(--tra);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.35;
+}
+.photos:hover, .options:hover {
+  opacity: 1;
+}
+
+.options {
+  bottom: 89vh;
+}
+
+input[type=radio], input[type=checkbox] {
+  display: none;
+}
+
+label, a.reload {
+  margin: 0;
+  position: relative;
+  width: 5.975vw;
+  height: 5.5vh;
+  display: inline-block;
+  padding: 0.3vh 0.3vw;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+label:before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 0.6vw);
+  height: calc(100% - 0.6vh);
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 1px;
+}
+
+a.reload, .options label {
+  /*
+  background:  #222;
+  color: #333;
+  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+a.reload {
+  margin-left: -48vw;
+  background: #555;
+}
+a.reload:hover {
+  background: #ccc;
+  color: #222;
+}
+a.reload:hover:before {
+  transform: rotate(360deg);
+  transition: var(--tra);
+  --ar: #111;
+  --rf: #ccc;
+}
+a.reload:before {
+  content: "";
+  position: absolute;
+  width: 3.4vw;
+  height: 3.4vw;
+  font-size: 4vmin;
+  font-weight: bold;
+  text-align: center;
+  line-height: 5.1vh;
+  border-radius: 100%;
+  --ar: #222;
+  --rf: #555;
+  background: linear-gradient(180deg, #fff0 0 45%, var(--rf) 45% 57%, #fff0 57% 100%), radial-gradient(circle at 50% 50%, #fff0 35%, var(--ar) calc(35% + 1px) 50%, #fff0 calc(50% + 1px) 100%), conic-gradient(from 45deg at 0% 100%, var(--ar) 0 12.5%, #fff0 0 100%) 15% 30%, conic-gradient(from -135deg at 100% 0%, var(--ar) 0 12.5%, #fff0 0 100%) 40% 70%;
+  background-size: 100% 100%, 100% 100%, 1.2vw 1.2vw, 1.2vw 1.2vw;
+  background-repeat: no-repeat;
+  background-position: 0% 0%, 0% 0%, 80% 20%, 20% 80%;
+}
+
+label[for=canvas] {
+  margin-left: -24vw;
+}
+
+label[for=ratan] {
+  margin-left: -12vw;
+}
+
+label[for=quilt] {
+  margin-left: 0vw;
+}
+
+label[for=mesh] {
+  margin-left: 12vw;
+}
+
+label[for=none] {
+  margin-left: 24vw;
+}
+
+label[for=view] {
+  margin-left: 48vw;
+  background: #555;
+}
+
+label:after, a.reload:after {
+  content: "";
+  position: absolute;
+  background: #1110;
+  color: #3338;
+  font-family: Arial, Helvetica, serif;
+  font-size: 10px;
+  top: 1.5vh;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+  opacity: 0;
+  padding: 0.5vh 0.5vw;
+  box-sizing: border-box;
+  transition: var(--tra);
+  filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label:hover:after, a.reload:hover:after {
+  top: 5vh;
+  opacity: 1;
+  transition: var(--tra);
+  filter: blur(0px);
+  padding: 1.5vh 0.5vw;
+  color: #e6e6e6;
+}
+
+a.reload:hover:after, .options label:hover:after {
+  top: -4.25vh;
+  opacity: 1;
+}
+
+label:nth-child(1):after {
+  content: "MOUNTAIN";
+}
+
+label:nth-child(2):after {
+  content: "OCEAN";
+}
+
+label:nth-child(3):after {
+  content: "JUNGLE";
+}
+
+label:nth-child(4):after {
+  content: "GRASS";
+}
+
+label:nth-child(5):after {
+  content: "TUNDRA";
+}
+
+label:nth-child(6):after {
+  content: "DESERT";
+}
+
+label:nth-child(7):after {
+  content: "FOREST";
+}
+
+label:nth-child(8):after {
+  content: "POND";
+}
+
+label:nth-child(9):after {
+  content: "RIVER";
+}
+
+a.reload:after {
+  content: "RELOAD";
+}
+
+label[for=canvas]:after {
+  content: "CANVAS";
+}
+
+label[for=ratan]:after {
+  content: "RATAN";
+}
+
+label[for=quilt]:after {
+  content: "QUILT";
+}
+
+label[for=mesh]:after {
+  content: "MESH";
+}
+
+label[for=none]:after {
+  content: "NONE";
+}
+
+label[for=view]:after {
+  content: "VIEW";
+}
+
+#f1:checked ~ .content,
+label[for=f1]:before {
+  --bg: url(https://source.unsplash.com/random/800x600/?mountain);
+}
+
+#f2:checked ~ .content,
+label[for=f2]:before {
+  --bg: url(https://source.unsplash.com/random/800x600/?ocean);
+}
+
+#f3:checked ~ .content,
+label[for=f3]:before {
+  --bg: url(https://source.unsplash.com/random/800x600/?jungle);
+}
+
+#f4:checked ~ .content,
+label[for=f4]:before {
+  --bg: url(https://source.unsplash.com/random/800x600/?grass);
+}
+
+#f5:checked ~ .content,
+label[for=f5]:before {
+  --bg: url(https://source.unsplash.com/random/800x600/?tundra);
+}
+
+#f6:checked ~ .content,
+label[for=f6]:before {
+  --bg: url(https://source.unsplash.com/random/800x600/?desert);
+}
+
+#f7:checked ~ .content,
+label[for=f7]:before {
+  --bg: url(https://source.unsplash.com/random/800x600/?forest);
+}
+
+#f8:checked ~ .content,
+label[for=f8]:before {
+  --bg: url(https://source.unsplash.com/random/800x600/?pond);
+}
+
+#f9:checked ~ .content,
+label[for=f9]:before {
+  --bg: url(https://source.unsplash.com/random/800x600/?river);
+}
+
+#f1:checked ~ .photos label[for=f1] {
+  background: #444;
+  cursor: default;
+}
+
+#f2:checked ~ .photos label[for=f2] {
+  background: #444;
+  cursor: default;
+}
+
+#f3:checked ~ .photos label[for=f3] {
+  background: #444;
+  cursor: default;
+}
+
+#f4:checked ~ .photos label[for=f4] {
+  background: #444;
+  cursor: default;
+}
+
+#f5:checked ~ .photos label[for=f5] {
+  background: #444;
+  cursor: default;
+}
+
+#f6:checked ~ .photos label[for=f6] {
+  background: #444;
+  cursor: default;
+}
+
+#f7:checked ~ .photos label[for=f7] {
+  background: #444;
+  cursor: default;
+}
+
+#f8:checked ~ .photos label[for=f8] {
+  background: #444;
+  cursor: default;
+}
+
+#f9:checked ~ .photos label[for=f9] {
+  background: #444;
+  cursor: default;
+}
+
+#canvas:checked ~ .options label[for=canvas],
+#ratan:checked ~ .options label[for=ratan],
+#quilt:checked ~ .options label[for=quilt],
+#mesh:checked ~ .options label[for=mesh],
+#none:checked ~ .options label[for=none] {
+  background: #666;
+  cursor: default;
+}
+
+label:hover {
+  background: #ccc;
+}
+
+.side:before, .options label:before {
+  --u: 0.5vmin;
+  --ts: 50%/ calc(var(--u) * 2) calc(var(--u) * 2);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+  opacity: 0.25;
+  filter: brightness(1.5);
+  border-radius: 2px;
+}
+
+.options label:before {
+  opacity: 1;
+  width: calc(100% - 0.6vw);
+  height: calc(100% - 0.6vh);
+}
+
+/*** FILTERS ***/
+#canvas:checked ~ .content .art .side:before,
+label[for=canvas]:before {
+  --c1: #fff8;
+  --c2: #fff9;
+  --c3: #fffc;
+  --c4: #fffd;
+  --sh: #0004;
+  --sh2: #0002;
+  background: repeating-linear-gradient(45deg, #42312f30 calc(var(--u) * 0.125), #fff0 calc(var(--u) * 0.25)), conic-gradient(from 85deg at 75% 1px, #fff0 0, var(--sh2) 0%, #fff0 5% 100%) var(--ts), conic-gradient(from -5deg at 0% calc(75% - 1px), #fff0 0, var(--sh) 0%, #fff0 4% 100%) var(--ts), conic-gradient(from 0deg at 75% calc(75% - 1px), #fff0 0 22%, var(--sh2) 25%, #fff0 25% 100%) var(--ts), conic-gradient(from 0deg at 75% calc(75% - 1px), var(--c4) 0 25%, #fff0 0 97%, var(--sh) 105%) var(--ts), linear-gradient(180deg, #fff0 0%, var(--sh) 25%, #fff0 25% 50%, var(--sh) 50%, #fff0 75% 100%) var(--ts), linear-gradient(180deg, #fff0 25%, var(--c3) 25% 50%, #fff0 50% 100%) var(--ts), linear-gradient(90deg, #fff0 0%, var(--sh) 25%, #fff0 25% 50%, var(--sh) 50%, #fff0 75% 100%) var(--ts), linear-gradient(90deg, #fff0 25%, var(--c2) 25% 50%, #fff0 50% 100%) var(--ts), linear-gradient(180deg, var(--sh) 0%, #fff0 25% 50%, var(--sh) 75%, #fff0 75% 100%) var(--ts), linear-gradient(180deg, #fff0 75%, var(--c1) 75% 100%) var(--ts), #42312F;
+}
+
+#ratan:checked ~ .content .art .side:before,
+label[for=ratan]:before {
+  --u: 0.75vmin;
+  --c1: #fff8;
+  --sh: #0008;
+  --sh2: #0006;
+  background: conic-gradient(from -10deg at 60% 0%, #fff0 0 25%, var(--sh2) 28%, #fff0 31% 100%) var(--ts), conic-gradient(from -5deg at 0% calc(60% - 1px), #fff0 0, var(--sh) 0%, #fff0 4% 100%) var(--ts), conic-gradient(from 0deg at 60% calc(60% - 1px), #fff0 0 22%, var(--sh2) 25%, #fff0 25% 100%) var(--ts), conic-gradient(from 0deg at 60% calc(60% - 1px), var(--c1) 0 25%, #fff0 0 97.5%, var(--sh) 102%) var(--ts), linear-gradient(180deg, #fff0 0%, var(--sh) 10%, #fff0 10% 50%, var(--sh) 50%, #fff0 60% 101%) var(--ts), linear-gradient(180deg, #fff0 10%, var(--c1) 10% 50%, #fff0 50% 100%) var(--ts), linear-gradient(90deg, #fff0 0%, var(--sh) 10%, #fff0 10% 50%, var(--sh) 50%, #fff0 60% 100%) var(--ts), linear-gradient(90deg, #fff0 10%, var(--c1) 10% 50%, #fff0 50% 100%) var(--ts), linear-gradient(180deg, #fff0 60%, var(--c1) 60% 100%) var(--ts);
+}
+
+#quilt:checked ~ .content .art .side:before,
+label[for=quilt]:before {
+  --c0: #fff8;
+  --c1: #0008;
+  --c2: #fff8;
+  --ts: 50%/ calc(var(--u) * 5) calc(var(--u) * 5);
+  --hide-top: conic-gradient(from 90deg at 50% 90%, var(--c0) 0 25%, #fff0 0 100%) var(--ts);
+  --hide-bot: conic-gradient(from -90deg at 50% 10%, var(--c0) 0 25%, #fff0 0 100%) var(--ts);
+  background: var(--hide-top), var(--hide-top), var(--hide-top), conic-gradient(from 90deg at 50% 80%, var(--c1) 0 25%, #fff0 0 100%) var(--ts), conic-gradient(from 90deg at 50% 70%, var(--c2) 0 25%, #fff0 0 100%) var(--ts), conic-gradient(from 90deg at 50% 60%, var(--c1) 0 25%, #fff0 0 100%) var(--ts), conic-gradient(from 90deg at 50% 50%, var(--c0) 0 25%, #fff0 0 100%) var(--ts), var(--hide-bot), var(--hide-bot), var(--hide-bot), conic-gradient(from -90deg at 50% 20%, var(--c1) 0 25%, #fff0 0 100%) var(--ts), conic-gradient(from -90deg at 50% 30%, var(--c2) 0 25%, #fff0 0 100%) var(--ts), conic-gradient(from -90deg at 50% 40%, var(--c1) 0 25%, #fff0 0 100%) var(--ts), conic-gradient(from -90deg at 50% 50%, var(--c0) 0 25%, #fff0 0 100%) var(--ts), repeating-linear-gradient(90deg, var(--c0) 0 10%, var(--c1) 0 20%, var(--c2) 0 30%, var(--c1) 0 40%, var(--c0) 0 50%) var(--ts), var(--c0);
+}
+
+#mesh:checked ~ .content .art .side:before,
+label[for=mesh]:before {
+  --c1: #545454;
+  --c2: #727272;
+  background: linear-gradient(290deg, #fff0 25%, var(--c1) 25% 35%, #fff0 35% 100%) var(--ts), linear-gradient(-290deg, #fff0 25%, var(--c2) 25% 35%, #fff0 35% 100%) var(--ts), linear-gradient(200deg, #fff0 25%, var(--c1) 25% 35%, #fff0 35% 100%) var(--ts), linear-gradient(-200deg, #fff0 25%, var(--c2) 25% 35%, #fff0 35% 100%) var(--ts), #fffc;
+}
+
+#none:checked ~ .content .art .side:before {
+  display: none;
+}
+
+label[for=none]:before {
+  --nr: #fff;
+  background: var(--nr);
+}
+
+label[for=none]:hover:before {
+  --nr: #888;
+}
+
+#none:checked ~ .options label[for=none]:before {
+  --nr: #ccc;
+}
+
+label[for=view]:before {
+  width: 2.25vw;
+  height: 1.5vw;
+  border: 3px solid #0008;
+  transition: var(--tra);
+  background-image: none;
+}
+
+label[for=view]:hover:before {
+  transform: rotate(90deg);
+  border: 3px solid #000;
+}
+
+#view:checked ~ .options label[for=view]:before {
+  transform: rotate(90deg);
+}
+
+#view:checked ~ .options label[for=view]:hover:before {
+  transform: rotate(0deg);
+}
+
+#view:checked ~ .content .zoom {
+  transform: scale3d(0.75, 0.75, 0.75);
+}
+#view:checked ~ .content .art {
+  --width: 60;
+  --height: 90;
+}
+#view:checked ~ .content .art .side {
+  background-size: 142.85vmin 100vmin;
+  background-position: center center;
+}
+#view:checked ~ .content .art .side:nth-child(3) {
+  background-position: -101vmin 50%;
+}
+#view:checked ~ .content .art .side:nth-child(4) {
+  background-position: -37vmin 50%;
+}
+#view:checked ~ .content .art .side:nth-child(5) {
+  background-position: 50% 0%;
+}
+#view:checked ~ .content .art .side:nth-child(6) {
+  background-position: 50% 100%;
+}
+
+@supports (-webkit-font-smoothing: antialiased) {
+  .cam {
+    transform: translateZ(30vmin);
+  }
+}
