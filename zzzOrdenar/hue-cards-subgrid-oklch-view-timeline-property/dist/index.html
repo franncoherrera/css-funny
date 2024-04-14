@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Hue Cards (subgrid, oklch, view-timeline, @property)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="pagination">
+  <a href="#section-1">Inline page 1</a>
+  <a href="#section-2">Inline page 2</a>
+  <a href="#section-3">Inline page 3</a>
+  <a href="#section-4">Inline page 4</a>
+  <a href="#section-5">Inline page 5</a>
+  <a href="#section-6">Inline page 6</a>
+  <a href="#section-7">Inline page 7</a>
+</div>
+
+<div class="controls">
+  <button class="previous" onclick="window.scrollBy(-100, 0)">
+    <svg viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+    </svg>
+  </button>
+  <button class="next" onclick="window.scrollBy(100, 0)">
+    <svg viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+    </svg>
+  </button>
+</div>
+
+<section id="section-1">
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Whoa.svg" height="500" width="500">
+    <h5>Lengthy drawn-out tall protracted and extended title</h5>
+    <p>Ironically short amount of content.</p>
+    <a href="#">Check it out</a>
+  </article>
+  
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Walking+Contradiction.svg" height="500" width="500">
+    <h5>Intermediate middling moderate title</h5>
+    <p>The words in this example are tolerable, passable and fair, but do draw out a bit.</p>
+    <a href="#">Some action</a>
+  </article>
+  
+  <article class="card">
+    <img class="card-img" src="https://assets.codepen.io/2585/Polka+Pup.svg" alt="placeholder-hand-drawn-vector" height="500" width="500">
+    <h5>It's.. short</h5>
+    <p>And brief.</p>
+    <a href="#">Ready</a>
+  </article>
+</section>
+<section id="section-2">
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Pilot.svg" height="500" width="500">
+    <h5>Lengthy drawn-out tall protracted and extended title</h5>
+    <p>Ironically short amount of content.</p>
+    <a href="#">Check it out</a>
+  </article>
+  
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Cube+Leg.svg" height="500" width="500">
+    <h5>Intermediate middling moderate title</h5>
+    <p>The words in this example are tolerable, passable and fair, but do draw out a bit.</p>
+    <a href="#">Some action</a>
+  </article>
+  
+  <article class="card">
+    <img class="card-img" src="https://assets.codepen.io/2585/Growth.svg" alt="placeholder-hand-drawn-vector" height="500" width="500">
+    <h5>It's.. short</h5>
+    <p>And brief.</p>
+    <a href="#">Ready</a>
+  </article>
+</section>
+<section id="section-3">
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Gamestation.svg" height="500" width="500">
+    <h5>Lengthy drawn-out tall protracted and extended title</h5>
+    <p>Ironically short amount of content.</p>
+    <a href="#">Check it out</a>
+  </article>
+  
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Kiddo.svg" height="500" width="500">
+    <h5>Intermediate middling moderate title</h5>
+    <p>The words in this example are tolerable, passable and fair, but do draw out a bit.</p>
+    <a href="#">Some action</a>
+  </article>
+  
+  <article class="card">
+    <img class="card-img" src="https://assets.codepen.io/2585/Reflecting.svg" alt="placeholder-hand-drawn-vector" height="500" width="500">
+    <h5>It's.. short</h5>
+    <p>And brief.</p>
+    <a href="#">Ready</a>
+  </article>
+</section>
+<section id="section-4">
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Rogue.svg" height="500" width="500">
+    <h5>Lengthy drawn-out tall protracted and extended title</h5>
+    <p>Ironically short amount of content.</p>
+    <a href="#">Check it out</a>
+  </article>
+  
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Waiting.svg" height="500" width="500">
+    <h5>Intermediate middling moderate title</h5>
+    <p>The words in this example are tolerable, passable and fair, but do draw out a bit.</p>
+    <a href="#">Some action</a>
+  </article>
+  
+  <article class="card">
+    <img class="card-img" src="https://assets.codepen.io/2585/Runner.svg" alt="placeholder-hand-drawn-vector" height="500" width="500">
+    <h5>It's.. short</h5>
+    <p>And brief.</p>
+    <a href="#">Ready</a>
+  </article>
+</section>
+<section id="section-5">
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Plants.svg" height="500" width="500">
+    <h5>Lengthy drawn-out tall protracted and extended title</h5>
+    <p>Ironically short amount of content.</p>
+    <a href="#">Check it out</a>
+  </article>
+  
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Coffee.svg" height="500" width="500">
+    <h5>Intermediate middling moderate title</h5>
+    <p>The words in this example are tolerable, passable and fair, but do draw out a bit.</p>
+    <a href="#">Some action</a>
+  </article>
+  
+  <article class="card">
+    <img class="card-img" src="https://assets.codepen.io/2585/Chaotic+Good.svg" alt="placeholder-hand-drawn-vector" height="500" width="500">
+    <h5>It's.. short</h5>
+    <p>And brief.</p>
+    <a href="#">Ready</a>
+  </article>
+</section>
+<section id="section-6">
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Jumping.svg" height="500" width="500">
+    <h5>Lengthy drawn-out tall protracted and extended title</h5>
+    <p>Ironically short amount of content.</p>
+    <a href="#">Check it out</a>
+  </article>
+  
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Whoa.svg" height="500" width="500">
+    <h5>Intermediate middling moderate title</h5>
+    <p>The words in this example are tolerable, passable and fair, but do draw out a bit.</p>
+    <a href="#">Some action</a>
+  </article>
+  
+  <article class="card">
+    <img class="card-img" src="https://assets.codepen.io/2585/Pacheco.svg" alt="placeholder-hand-drawn-vector" height="500" width="500">
+    <h5>It's.. short</h5>
+    <p>And brief.</p>
+    <a href="#">Ready</a>
+  </article>
+</section>
+<section id="section-7">
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Meela+Pantalones.svg" height="500" width="500">
+    <h5>Lengthy drawn-out tall protracted and extended title</h5>
+    <p>Ironically short amount of content.</p>
+    <a href="#">Check it out</a>
+  </article>
+  
+  <article class="card">
+    <img src="https://assets.codepen.io/2585/Groceries.svg" height="500" width="500">
+    <h5>Intermediate middling moderate title</h5>
+    <p>The words in this example are tolerable, passable and fair, but do draw out a bit.</p>
+    <a href="#">Some action</a>
+  </article>
+  
+  <article class="card">
+    <img class="card-img" src="https://assets.codepen.io/2585/Fling.svg" alt="placeholder-hand-drawn-vector" height="500" width="500">
+    <h5>It's.. short</h5>
+    <p>And brief.</p>
+    <a href="#">Ready</a>
+  </article>
+</section>
+<!-- partial -->
+  
+</body>
+</html>

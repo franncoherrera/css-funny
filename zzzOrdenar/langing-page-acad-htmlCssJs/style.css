@@ -1,0 +1,381 @@
+:root {
+    --bgColor: #1a1e1f;
+    --bgGray: #262626;
+    --softGray: #a8a8a8;
+    --gold: #845e49;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+
+/* HEADER & NAV */
+
+header {
+    background-color: var(--bgColor);
+}
+
+.navbar ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar li {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar-logo {
+    flex: 1;
+    font-size: 2rem;
+    user-select: none;
+}
+
+.navbar-toggle {
+    display: none;
+}
+
+.navbar-links a {
+    color: #fff;
+}
+
+.navbar-links:hover {
+    background-color: var(--gold);
+}
+
+
+
+
+
+
+/***** BANNER *****/
+.banner {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(https://images5.alphacoders.com/608/608036.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.description {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #fff;
+}
+
+.banner-btn {
+    padding: 0.625em 2em;
+    font-size: 1.25em;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    margin-top: 2em;
+}
+
+.banner-btn:hover {
+    background-color: var(--gold);
+}
+
+.icons {
+    padding: 2em;
+    justify-content: center;
+}
+
+.social-icons {
+    text-decoration: none;
+    padding: 0.25em;
+    margin: 0 1em;
+    color: #fff;
+}
+
+.social-icons:hover {
+    color: var(--gold);
+}
+
+.social-icons i {
+    font-size: 1.8em;
+}
+
+
+/***** ARTICLE SECTION *****/
+.items-section {
+    padding: 2em;
+    background-color: var(--bgGray);
+}
+
+.item--img {
+    width: 100%;
+    height: 18.75em;
+    flex: none;
+    background-image: url(https://images5.alphacoders.com/608/thumb-1920-608041.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.item--content {
+    margin: 1em 0 1em 0;
+}
+
+.item--content-title {
+    margin: 0;
+    font-size: 2.5em;
+    line-height: 1.2;
+    color: var(--gold);
+}
+
+.item--content-text {
+    margin: 0;
+    position: relative;
+    line-height: 1.4;
+    font-size: 1.25em;
+    color: var(--softGray);
+}
+
+.item--content-text::after {
+    content: '';
+    margin-top: 1em;
+    width: 2em;
+    height: 0.1em;
+    position: absolute;
+    background-color: var(--softGray);
+}
+
+
+/***** ITEMS OR CARDS SECTION *****/
+.section {
+    padding: 1.5em;
+    background-color: var(--bgColor);
+}
+
+.wrapper {
+    max-width: 70vw;
+    margin: 0 auto;
+}
+
+.card {
+    padding: 0.5em;
+    margin: 0.5em 0;
+    text-align: center;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.2;
+    color: var(--gold);
+}
+
+.card-text {
+    font-size: 1em;
+    line-height: 1.5;
+    color: var(--softGray);
+}
+
+
+
+/***** ABOUT SECTION *****/
+.about-section {
+    padding: 5em 0;
+    min-height: 100vh;
+    background-image: url(https://www.wallpapertip.com/wmimgs/85-859131_fitness-wallpaper-hd-women.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-article {
+    background: rgb(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.about-card {
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.6em;
+    color: #fff;
+}
+
+.about-card img {
+    max-width: 25%;
+}
+
+
+/***** CONTACT SECTION *****/
+.contact {
+    padding: 3em;
+    max-width: 650px;
+}
+
+.contact-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.text-input {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-color: #000;
+    border-width: 0 0 2px 0;
+    font-size: 18px;
+    outline: none;
+}
+
+.button {
+    margin: 2em 0;
+}
+
+.submit-btn {
+    padding: 0.5em 2em;
+    border: none;
+    font-size: 1.25em;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/***** FOOTER *****/
+footer {
+    background-color: var(--bgColor);
+	padding: 30px 0px;
+}
+
+.footer-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: flex-end;
+}
+
+.thaks-text p,
+.copy-text p {
+	color: #666;
+	padding: 2.5px 5px;
+	font-size: 12px
+}
+
+.copy-text p {
+	font-size: 14px;
+}
+
+.thaks-text a,
+.copy-text a {
+	color: #888;
+	text-decoration: none;
+}
+
+.thaks-text a:hover,
+.copy-text a:hover {
+	color: #fff;
+}
+
+
+/***** MEDIA QUERY'S *****/
+@media screen and (max-width: 600px) {
+    .navbar ul {
+        flex-wrap: wrap;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .active {
+        display: block;
+    }
+}
+
+
+
+@media screen and (min-width: 800px){
+
+
+    .items-section {
+        display: flex;
+    }
+    
+    .item--img {
+        width: 45%;
+    }
+
+    .item--content {
+        padding: 0 0 0 2em;
+    }
+
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 5px;
+        max-width: 95vw;
+    }
+
+
+    .about-article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 5px;
+        max-width: 95vw;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 5px;
+        max-width: 100%;
+    }
+
+}

@@ -1,0 +1,123 @@
+body {
+  background: linear-gradient(180deg, #efefef 0%, #cdcdcf 100%) no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+#toggleWrapper {
+  width: 100px;
+  height: 140px;
+  border-radius: 8px;
+  border: solid 1px #fff;
+  border-right-color: #c9c9c9;
+  border-bottom-color: #949494;
+  border-left-color: #bcbcbc;
+  background: linear-gradient(180deg, #efefef 0%, #cccccc 100%);
+  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  margin: auto;
+  padding: 12px 14px;
+}
+#toggleWrapper input {
+  appearance: none;
+}
+#toggleWrapper > div {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: 100%;
+  border: solid 1px #666;
+  border-radius: 8px;
+  box-shadow: 2px -2px 2px 1px rgba(0, 0, 0, 0.1), -2px 0px 2px 1px rgba(0, 0, 0, 0.1);
+}
+#toggleWrapper #toggleOn,
+#toggleWrapper #toggleOff {
+  width: 100%;
+  height: 58px;
+  background: #fff;
+  margin: 0;
+  position: relative;
+}
+#toggleWrapper #toggleOn {
+  border-bottom: solid 4px #898989;
+  background: linear-gradient(180deg, #dedede 0%, #eaeaea 100%);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -2px 2px 2px rgba(0, 0, 0, 0.2);
+  margin-top: -2px;
+}
+#toggleWrapper #toggleOn:before {
+  content: "";
+  width: 2px;
+  height: 26px;
+  background: #666;
+  left: 50%;
+  top: 50%;
+  margin: -13px 0 0 -1px;
+  position: absolute;
+}
+#toggleWrapper #toggleOn:after {
+  content: "";
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  box-shadow: 0 10px 15px 1px rgba(0, 0, 0, 0.8);
+}
+#toggleWrapper #toggleOn:checked {
+  border-bottom: solid 1px #666;
+  background: radial-gradient(circle, #e4fdef 0%, #e3f7eb 20%, #e0ede6 30%, #dadada 60%);
+}
+#toggleWrapper #toggleOn:checked:before {
+  background: #2eea0e;
+  box-shadow: 1px -1px 2px 1px rgba(255, 255, 255, 0.5), -1px 1px 2px 1px rgba(255, 255, 255, 0.2);
+}
+#toggleWrapper #toggleOn:checked:after {
+  box-shadow: unset;
+}
+#toggleWrapper #toggleOff {
+  background: linear-gradient(180deg, #bbbbbb 0%, #dedede 100%);
+  border-radius: 8px 8px 0 0;
+  border-top: solid 4px #e4e4e4;
+  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.2), 2px -2px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: -2px;
+}
+#toggleWrapper #toggleOff:before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  border: solid 2px #666;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  margin: -13px 0 0 -13px;
+  position: absolute;
+}
+#toggleWrapper #toggleOff:checked {
+  background: radial-gradient(circle, #f8dfde 0%, #f6cbca 20%, #e0cecd 30%, #dedede 60%);
+}
+#toggleWrapper #toggleOff:checked:before {
+  background: #f5c9c9;
+  border-color: #ca5471;
+  box-shadow: 1px -1px 2px 1px rgba(255, 255, 255, 0.5), -1px 1px 2px 1px rgba(255, 255, 255, 0.5);
+}
+
+#light {
+  pointer-events: none;
+  background-image: linear-gradient(180deg, rgba(174, 255, 0, 0.1) 0%, rgba(174, 255, 0, 0) 100%);
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 2.5s ease-out;
+}
+#toggleOn:checked + #light {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
